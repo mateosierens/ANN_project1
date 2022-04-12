@@ -18,6 +18,10 @@ data = load_data(args)
 network = loadmodel(15)
 print(network.model)
 
+if torch.cuda.is_available():
+    print("--------------------------------RUNNING ON GPU--------------------------------")
+else:
+    print("running on cpu")
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 network.model = network.model.to(device)
 train = train_cnn(network.model, data, device)

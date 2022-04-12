@@ -18,6 +18,9 @@ Creating the architecture of the network and design the training procedure.
 '''
 network = cnn()
 
+if torch.cuda.is_available():
+    print("---------------------------------------RUNNING ON GPU---------------------------------------")
+
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 network = network.to(device)
 train = train_cnn(network, data, device)

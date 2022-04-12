@@ -19,7 +19,7 @@ class train_cnn():
         return F.cross_entropy
 
     def optim_function(self):
-        return optim.SGD(filter(lambda p: p.requires_grad, self.model.parameters()), lr=0.001, momentum=0.9)
+        return optim.SGD(filter(lambda p: p.requires_grad, self.model.parameters()), lr=0.0001, momentum=0.9)
 
     def fit(self,device):
         epochs = 20

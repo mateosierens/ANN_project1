@@ -10,7 +10,7 @@ def plot_trainval_loss(train, val):
     #plt.show()
 
     base_dir = './input_output'
-    save_add = base_dir + '/result/with_dropout.png'
+    save_add = base_dir + '/result/full_VGG_batch5.png'
 
     plt.savefig(save_add)
 

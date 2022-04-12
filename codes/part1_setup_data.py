@@ -26,5 +26,5 @@ class load_data():
                                                  ])
         val_dataset = datasets.ImageFolder(valdir, transform=val_data_transform)
 
-        self.train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=1, shuffle=True)
-        self.val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=1, shuffle=False)
+        self.train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=5, shuffle=True)
+        self.val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=5, shuffle=False)
